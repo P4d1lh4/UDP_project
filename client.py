@@ -1,4 +1,5 @@
 import socket as s
+import time
 
 def checksum(data):
     byte_count = len(data)
@@ -20,3 +21,4 @@ if __name__ == "__main__":
         data, addr = client.recvfrom(1024)
         data = data.decode("utf-8")
         print(len(data))
+        time.sleep(1)
